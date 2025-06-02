@@ -5,7 +5,7 @@
   The correlation is characterized by a correlation time, $\tau$, which estimates how many _steps_ are necessary for the system to _forget_ its initial state. For data with exponential correlation: \
   C(t) = $e^{-\frac{t}{\tau}}$ \
   the theoretical statistical inefficiency is given by: \
-  s = 1 + 2$\tau$ \
+  s = 1 + $2\tau$ \
   , where $\tau$ is the integrated correlation time. \
 - ## Density of states
 
