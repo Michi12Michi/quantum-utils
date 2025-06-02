@@ -21,6 +21,9 @@
       <img src="https://latex.codecogs.com/png.latex?\dpi{150} $s = b \cdot \frac{\sigma^2_{block}}{\sigma^2_{total}}$" />
   </p>
   </li>
-- ## Density of states
+  <li>
+    <h2>Density of states</h2>
+    <p>Manteinance... </p>
+  </li>
 
   </ul>
