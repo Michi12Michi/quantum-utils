@@ -11,11 +11,11 @@
     <p align="center">
       <img src="https://latex.codecogs.com/png.latex?\dpi{150} $C(t) = e^{-\frac{t}{\tau}}$" />
     </p>
+    <p>The theoretical statistical inefficiency is given by:</p>
+    <p align="center">
+      <img src="https://latex.codecogs.com/png.latex?\dpi{150} $s = 1 + 2\tau$" />
+    </p>
    \
-  \
-  the theoretical statistical inefficiency is given by: \
-  \
-  s = 1 + $2\tau$ \
   \
   , where $\tau$ is the integrated correlation time. \
   Consecutive data points are grouped into blocks of size b, and for each block 
