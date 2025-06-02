@@ -11,14 +11,15 @@
     <p align="center">
       <img src="https://latex.codecogs.com/png.latex?\dpi{150} $C(t) = e^{-\frac{t}{\tau}}$" />
     </p>
-    <p>The theoretical statistical inefficiency is given by:</p>
+    <p>, the theoretical statistical inefficiency is given by:</p>
     <p align="center">
       <img src="https://latex.codecogs.com/png.latex?\dpi{150} $s = 1 + 2\tau$" />
     </p>
-   \
-  \
-  , where $\tau$ is the integrated correlation time. \
-  Consecutive data points are grouped into blocks of size b, and for each block 
+  <p>, where $\tau$ is the integrated correlation time.</p>
+  <p>Consecutive data points (with variance $\sigma^2_{total}$) are grouped into blocks of increasing size b, and for each block the mean and the variance are calculated, as well as the statistical inefficiency given by:</p>
+  <p align="center">
+      <img src="https://latex.codecogs.com/png.latex?\dpi{150} $s = b \cdot \frac{\sigma^2_{block}}{\sigma^2_{total}}$" />
+  </p>
   </li>
 - ## Density of states
 
