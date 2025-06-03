@@ -15,11 +15,15 @@
     <p align="center">
       <img src="https://latex.codecogs.com/png.latex?\dpi{150} $s = 1 + 2\tau$" />
     </p>
-  <p>, where $\tau$ is the integrated correlation time.</p>
-  <p>Consecutive data points (with variance $\sigma^2_{total}$) are grouped into blocks of increasing size b, and for each block the mean and the variance are calculated, as well as the statistical inefficiency given by:</p>
-  <p align="center">
+    <p>, where $\tau$ is the integrated correlation time.</p>
+    <p>Consecutive data points (with variance $\sigma^2_{total}$) are grouped into blocks of increasing size b, and for each block the mean and the variance are calculated, as well as the statistical inefficiency given by:</p>
+    <p align="center">
       <img src="https://latex.codecogs.com/png.latex?\dpi{150} $s = b \cdot \frac{\sigma^2_{block}}{\sigma^2_{total}}$" />
-  </p>
+    </p>
+    <p>As block size b increases: </p>
+    <ul>
+      <li>for small sized blocks, i.e. $\rm b \lll \tau$, blocks are still correlated internally, and $\rm s \l 1 + 2\tau$;</li>
+    </ul>
   </li>
   <li>
     <h2>Density of states</h2>
