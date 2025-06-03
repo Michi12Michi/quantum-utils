@@ -22,7 +22,7 @@
     </p>
     <p>As block size b increases: </p>
     <ul>
-      <li>for small sized blocks, i.e. $\rm b \lll \tau$, blocks are still correlated internally, and $\rm s \l 1 + 2\tau$;</li>
+      <li>for small sized blocks, i.e. $\rm b \ll \tau$, blocks are still correlated internally, and $\rm s < 1 + 2\tau$;</li>
     </ul>
   </li>
   <li>
