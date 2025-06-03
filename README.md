@@ -23,6 +23,8 @@
     <p>As block size b increases: </p>
     <ul>
       <li>for small sized blocks, i.e. $\rm b \ll \tau$, blocks are still correlated internally, and $\rm s < 1 + 2\tau$;</li>
+      <li>for optimal sized blocks, i. e. $\rm b \approx \tau$, blocks become approximately independent, and $\rm s \approx 1 + 2\tau$;</li>
+      <li>for large blocks, statistical noise increases, but the plateau value remains stable.</li>
     </ul>
   </li>
   <li>
