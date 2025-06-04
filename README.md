@@ -41,7 +41,9 @@
         <p>results = BlockAnalysis(filename)</p>
         <p>results.print_results()</p>
         <p>results.create_graph()</p>
-      <img width="70%" align="center" src="https://github.com/Michi12Michi/quantum-utils/blob/main/assets/synthetic_test_results.png" />
+        <p align="center">
+          <img width="70%" align="center" src="https://github.com/Michi12Michi/quantum-utils/blob/main/assets/synthetic_test_results.png" />
+        </p>
   </li>
       
   <li>
