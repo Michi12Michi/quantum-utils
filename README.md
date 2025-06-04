@@ -2,6 +2,7 @@
 <ul>
   <li>
     <h2>Blocking Analysis</h2>
+    <img src="https://www.github.com/Michi12Michi/quantum-utils/main/assets/syntethic_data_results.png" />
     <p>When dealing with time series data from Monte Carlo simulations or physical measurements, data may be (too often!) statistically correlated: this implies that each new configuration of the system depends on the previous ones, and thus the system <em>remembers</em> its previous state. In these cases, the true statistical error is found to be greater than the simple standard deviation of the mean, given by: </p>
     <p align="center">
       <img src="https://latex.codecogs.com/png.latex?\dpi{150} $\sigma_{mean} = \frac{\sigma}{\sqrt{N}}$" />
