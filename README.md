@@ -36,6 +36,11 @@
     <p align="center">
       <img src="https://latex.codecogs.com/png.latex?\dpi{150} $\rm N_{effective} = \frac{N}{s}$" />
     </p>
+      <br>
+      <h5>Usage: </h5>
+        <p>results = BlockAnalysis(filename)</p>
+        <p>results.print_results()</p>
+        <p>results.create_graph()</p>
   </li>
       
   <li>
