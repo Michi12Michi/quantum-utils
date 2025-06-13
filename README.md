@@ -47,8 +47,10 @@
   </li>
       
   <li>
-    <h2>Density of states</h2>
-    <p>Manteinance... </p>
+    <h2>Density of states (DOS)</h2>
+    <p>The Density of states describes how many electronic states (both occupied and unoccupied) are available at each energy level for a system and it is crucial for understanding various material properties, including electrical conductivity, magnetic properties, and optical behavior.</p>
+    <p>Mathematically, it is represented as a function D(E), where E is the energy, and it is derived from the eigenvalues of the system's Hamiltonian (the energy levels of the electrons).</p>
+    <p>The Projected Density of States (pDOS) is a more detailed version of the DOS, which shows how the density of states is distributed across different atomic orbitals or specific atomic sites. While the DOS provides the total number of states at each energy level, the pDOS breaks this down further by projecting the states onto different components (such as atoms or atomic orbitals).</p>
     <h5>Usage (1):</h5>
     <p>DOS = DensityOfStates(parameter_name: str, parameter_vector: np.ndarray, parameter_minimum: float, parameter_maximum: float, norm_factor: float, stepsize: Optional[float] = DOS_STEP, sigma: Optional[float] = DOS_SIGMA, weights: Optional[np.ndarray] = None, out_file: Union[str, Path] = None)</p>
     <p>DOS.create_graph(output_filename: Union[str, Path], parameter_vector_1: Union[np.ndarray, List, Deque], density_vector_1: Union[np.ndarray, List, Deque], curve_label1: str, x_label: str, y_label: Optional[str] = "DOS (a. u.)", parameter_vector_2: Optional[Union[np.ndarray, List, Deque]] = None, density_vector_2: Optional[Union[np.ndarray, List, Deque]] = None, curve_label2: Optional[str] = None, inverted_plot: Optional[bool] = False)</p>
