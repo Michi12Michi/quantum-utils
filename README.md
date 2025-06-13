@@ -49,6 +49,17 @@
   <li>
     <h2>Density of states</h2>
     <p>Manteinance... </p>
+    <h5>Usage: </h5>
+    <p>DOS = DensityOfStates(
+        parameter_name: str, 
+        parameter_vector: np.ndarray,
+        parameter_minimum: float,
+        parameter_maximum: float,
+        norm_factor: float,
+        stepsize: Optional[float] = DOS_STEP,
+        sigma: Optional[float] = DOS_SIGMA,
+        weights: Optional[np.ndarray] = None,
+        out_file: Union[str, Path] = None)</p>
     <p align="center">
         <img width="70%" align="center" src="https://github.com/Michi12Michi/quantum-utils/blob/main/assets/test-pdos.png" />
     </p>
