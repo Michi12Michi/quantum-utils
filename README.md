@@ -49,6 +49,9 @@
   <li>
     <h2>Density of states</h2>
     <p>Manteinance... </p>
+    <p align="center">
+        <img width="70%" align="center" src="https://github.com/Michi12Michi/quantum-utils/blob/main/assets/test-pdos.png" />
+    </p>
   </li>
 
   </ul>
