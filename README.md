@@ -49,17 +49,13 @@
   <li>
     <h2>Density of states</h2>
     <p>Manteinance... </p>
-    <h5>Usage: </h5>
-    <p>DOS = DensityOfStates(
-        parameter_name: str, 
-        parameter_vector: np.ndarray,
-        parameter_minimum: float,
-        parameter_maximum: float,
-        norm_factor: float,
-        stepsize: Optional[float] = DOS_STEP,
-        sigma: Optional[float] = DOS_SIGMA,
-        weights: Optional[np.ndarray] = None,
-        out_file: Union[str, Path] = None)</p>
+    <h5>Usage (1):</h5>
+    <p>DOS = DensityOfStates(parameter_name: str, parameter_vector: np.ndarray, parameter_minimum: float, parameter_maximum: float, norm_factor: float, stepsize: Optional[float] = DOS_STEP, sigma: Optional[float] = DOS_SIGMA, weights: Optional[np.ndarray] = None, out_file: Union[str, Path] = None)</p>
+    <p>DOS.create_graph(output_filename: Union[str, Path], parameter_vector_1: Union[np.ndarray, List, Deque], density_vector_1: Union[np.ndarray, List, Deque], curve_label1: str, x_label: str, y_label: Optional[str] = "DOS (a. u.)", parameter_vector_2: Optional[Union[np.ndarray, List, Deque]] = None, density_vector_2: Optional[Union[np.ndarray, List, Deque]] = None, curve_label2: Optional[str] = None, inverted_plot: Optional[bool] = False)</p>
+    <h5>Usage (2): </h5>
+    <p>DOS = DensityOfStates.from_cp2k_output(filename: Union[str, Path], subspace: str, out_file: Optional[Union[str, Path]] = None, **kwargs)</p>
+    <h5>Usage (3): </h5>
+    <p>pDOS = DensityOfStates.from_cp2k_pdos_output(filename: str, out_file: Optional[Union[str, Path]] = None, **kwargs)</p>
     <p align="center">
         <img width="70%" align="center" src="https://github.com/Michi12Michi/quantum-utils/blob/main/assets/test-pdos.png" />
     </p>
