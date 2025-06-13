@@ -53,7 +53,7 @@
     <p>The Projected Density of States (pDOS) is a more detailed version of the DOS, which shows how the density of states is distributed across different atomic orbitals or specific atomic sites. While the DOS provides the total number of states at each energy level, the pDOS breaks this down further by projecting the states onto different components (such as atoms or atomic orbitals).</p>
     <p>For the DOS and the pDOS, D(E) is calculated as follows:</p>
     <p align="center">
-      <img src="https://latex.codecogs.com/png.latex?\dpi{150} $\rm D(E) = \sum_{\rm i} w_{\rm i} \cdot \frac{1}{\sqrt{2 \pi \sigma^2}} exp\left(- frac{\left(E-E_i \right)^2}{2 \sigma^2} \right)   $" />
+      <img src="https://latex.codecogs.com/png.latex?\dpi{150} $\rm D(E) = \sum_{\rm i} w_{\rm i} \cdot \frac{1}{\sqrt{2 \pi \sigma^2}} exp\left(- \frac{\left(E-E_i \right)^2}{2 \sigma^2} \right)   $" />
     </p>
     <h5>Usage (1):</h5>
     <p>DOS = DensityOfStates(parameter_name: str, parameter_vector: np.ndarray, parameter_minimum: float, parameter_maximum: float, norm_factor: float, stepsize: Optional[float] = DOS_STEP, sigma: Optional[float] = DOS_SIGMA, weights: Optional[np.ndarray] = None, out_file: Union[str, Path] = None)</p>
