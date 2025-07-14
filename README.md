@@ -66,5 +66,10 @@
         <img width="70%" align="center" src="https://github.com/Michi12Michi/quantum-utils/blob/main/assets/test-pdos.png" />
     </p>
   </li>
-
+   <li>
+    <h2>Potential corrections</h2>
+     <p>The core issue of DFT calculations is about relative energies. The Kohn-Sham eigenvalues and electrostatic potentials are only meaningful relative to some reference point within the calculation cell. Without proper referencing, it is not possible to: compare energies between different systems, calculate work functions or ionization potentials, determine band alignments at interfaces and thus connect theoretical results to experimental measurements</p>
+     <p>In surface/interface calculations, the vacuum level serves as the universal energy reference because it has true physical meaning, representing the energy of a stationary electron at infinite distance from any material. Thus, connecting the reference potential to the vacuum level allows to draw experimental connections [most surface spectroscopy techniques (photoemission, inverse photoemission) naturally reference to vacuum] and ensures universality (it's the same regardless of the material system).</p>
+     <h3>In progress...</h3>
+   </li>
   </ul>
