@@ -55,7 +55,7 @@ class DensityOfStates:
                 raise ValueError("The weights for pDOS calculation must be an array of floating point or integer values.")
         if out_file and not isinstance(out_file, (str, Path)):
             raise ValueError("The filename for DOS/pDOS saving must be a string or a path.")
-        if out_file and len(str(out_file)):
+        if out_file and not len(str(out_file)):
             raise ValueError("The filename for DOS/pDOS saving must be a non empty string or a path.")
         
         tic = perf_counter()
