@@ -87,8 +87,9 @@
     </p>
      <p>The weighted distance between two structure is then given by:</p>
      <p align="center">
-      <img src="https://latex.codecogs.com/png.latex?\dpi{150} $\Delta q = \norm{\textbf{q}^B - \textbf{q}^A} = \sqrt{\sum_{k=1}^{3N} \frac{(r^B_k - r^A_k)^2}{m_{ak}}}$" />
+      <img src="https://latex.codecogs.com/png.latex?\dpi{150} \Delta q = \left\lVert \textbf{q}^B - \textbf{q}^A \right\rVert = \sqrt{\sum_{k=1}^{3N} \frac{(r^B_k - r^A_k)^2}{m_{ak}}}" />
     </p>
+
      <h5>Usage: </h5>
      <p>python3 Q-distance-between-minima.py filename_initial filename_final</p>
    </li>
