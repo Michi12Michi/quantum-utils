@@ -72,4 +72,8 @@
      <p>In surface/interface calculations, the vacuum level serves as the universal energy reference because it has true physical meaning, representing the energy of a stationary electron at infinite distance from any material. Thus, connecting the reference potential to the vacuum level allows to draw experimental connections [most surface spectroscopy techniques (photoemission, inverse photoemission) naturally reference to vacuum] and ensures universality (it's the same regardless of the material system).</p>
      <h3>In progress...</h3>
    </li>
+   <li>
+    <h2>Supercell shift</h2>
+     <p>The supercell_shift.py script allows to shift all the atoms constituting a cell (with defined lattice constants) by a given translation vector, according to Periodic Boundary Conditions.</p>
+   </li>
   </ul>
