@@ -74,6 +74,16 @@
    </li>
    <li>
     <h2>Supercell shift</h2>
-     <p>The supercell_shift.py script allows to shift all the atoms constituting a cell (with defined lattice constants) by a given translation vector, according to Periodic Boundary Conditions.</p>
+     <p>The supercell_shift.py script allows to shift all the atoms constituting a (super)cell (with defined lattice constants) by a given translation vector, according to Periodic Boundary Conditions.</p>
+     <h5>Usage: </h5>
+     <p>python3 supercell_shift.py filename a_const b_const c_const x_transl y_transl z_transl</p>
+   </li>
+   <li>
+     <h2>Mass-weighted distance between NEB images</h2>
+     <p>The Q-distance-between-minima.py script allows to evaluate the mass-weighted distance between two NEB images, given their structures in aligned .xyz files. </p>
+     <p>Starting from the cartesian coordinates of the two minima, <b>r<sup>A</sup></b> and <b>r<sup>B</sup></b>, for each coordinate component, k, belonging to atom a (mass m<sub>a</sub>, in amu), the mass-weighted coordinate is defined:
+     <p align="center">
+      <img src="https://latex.codecogs.com/png.latex?\dpi{150} $\rm q_k = \frac{r_k}{m_a}$" />
+    </p>
    </li>
   </ul>
