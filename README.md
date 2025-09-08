@@ -89,7 +89,8 @@
        <p align="center">
         <img src="https://latex.codecogs.com/png.latex?\dpi{150} $\rm \Delta q = \left\lVert \textbf{q}^B - \textbf{q}^A \right\rVert = \sqrt{\sum_{k=1}^{3N} (r^B_k - r^A_k)^2 m_{ak}}$" />
       </p>
+     <p>NOTE: the calculation involves an estimation of the centers of mass for the two given structures, and evaluates the mass-weighted distance if their distance does not exceed 0.01 Angstrom. Otherwise, a cell shift (according to Periodic Boundary Conditions) managed by <b>supercell_shift.py</b> is required (as well as parameters defined with --const).</p>
      <h5>Usage:</h5>
-     <p>python3 Q-distance-between-minima.py filename_initial filename_final</p>
+     <p>python3 Q-distance-between-minima.py -i filename_initial -f filename_final --const a_constant b_constant c_constant</p>
    </li>
   </ul>
