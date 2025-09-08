@@ -34,9 +34,9 @@ class Q:
                     continue
                 if (found_in_i := search(ATOM_PATTERN, i_line.strip())) and (found_in_f := search(ATOM_PATTERN, f_line.strip())):
                     if found_in_i.group(1) == found_in_f.group(1):
-                        mass = ELEMENTS[found_in_i.group(1)].mass
-                        x_i, y_i, z_i = float(found_in_i.group(2))/mass, float(found_in_i.group(3))/mass, float(found_in_i.group(4))/mass
-                        x_f, y_f, z_f = float(found_in_f.group(2))/mass, float(found_in_f.group(3))/mass, float(found_in_f.group(4))/mass
+                        sq_mass = sqrt(ELEMENTS[found_in_i.group(1)].mass)
+                        x_i, y_i, z_i = float(found_in_i.group(2))/sq_mass, float(found_in_i.group(3))/sq_mass, float(found_in_i.group(4))/sq_mass
+                        x_f, y_f, z_f = float(found_in_f.group(2))/sq_mass, float(found_in_f.group(3))/sq_mass, float(found_in_f.group(4))/sq_mass
                         _deltaQ += (x_f - x_i)**2 + (y_f - y_i)**2 + (z_f - z_i)**2
                     else:
                         raise Exception("The specified .xyz files are not aligned!")
@@ -53,3 +53,4 @@ if __name__ == "__main__":
     parser.add_argument("filename_2", type=str, help="")
     args = parser.parse_args()
     Q(file_init=args.filename_1, file_final=args.filename_2)
+
