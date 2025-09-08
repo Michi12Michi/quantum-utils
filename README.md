@@ -83,11 +83,11 @@
      <p>The Q-distance-between-minima.py script allows to evaluate the mass-weighted distance between two NEB images, given their structures in aligned .xyz files. </p>
      <p>Starting from the cartesian coordinates of the two minima, <b>r<sup>A</sup></b> and <b>r<sup>B</sup></b>, for each coordinate component, k, belonging to atom a (mass m<sub>a</sub>, in amu), the mass-weighted coordinate is defined:
      <p align="center">
-      <img src="https://latex.codecogs.com/png.latex?\dpi{150} $\rm q_k = \frac{r_k}{m_a}$" />
+      <img src="https://latex.codecogs.com/png.latex?\dpi{150} $\rm q_k = r_k \cdot sqrt{m_a}$" />
     </p>
      <p>The weighted distance between two structure is then given by:</p>
        <p align="center">
-        <img src="https://latex.codecogs.com/png.latex?\dpi{150} $\rm \Delta q = \left\lVert \textbf{q}^B - \textbf{q}^A \right\rVert = \sqrt{\sum_{k=1}^{3N} \frac{(r^B_k - r^A_k)^2}{m_{ak}}}$" />
+        <img src="https://latex.codecogs.com/png.latex?\dpi{150} $\rm \Delta q = \left\lVert \textbf{q}^B - \textbf{q}^A \right\rVert = \sqrt{\sum_{k=1}^{3N} (r^B_k - r^A_k)^2} sqrt{m_{ak}}$" />
       </p>
      <h5>Usage:</h5>
      <p>python3 Q-distance-between-minima.py filename_initial filename_final</p>
