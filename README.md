@@ -48,10 +48,10 @@
       
   <li>
     <h2>Density of states (DOS)</h2>
-    <p>The Density of states describes how many electronic states (both occupied and unoccupied) are available at each energy level for a system and it is crucial for understanding various material properties, including electrical conductivity, magnetic properties, and optical behavior.</p>
+    <p>The Density Of States describes how many electronic states (both occupied and unoccupied) are available at each energy level for a system and it is crucial for understanding various material properties, including electrical conductivity, magnetic properties, and optical behavior.</p>
     <p>Mathematically, it is represented as a function D(E), where E is the energy, and it is derived from the eigenvalues of the system's Hamiltonian (the energy levels of the electrons).</p>
-    <p>The Projected Density of States (pDOS) is a more detailed version of the DOS, which shows how the density of states is distributed across different atomic orbitals or specific atomic sites. While the DOS provides the total number of states at each energy level, the pDOS breaks this down further by projecting the states onto different components (such as atoms or atomic orbitals).</p>
-    <p>For the DOS and the pDOS, D(E) is calculated as follows:</p>
+    <p>The Projected Density Of States (pDOS) is a more detailed version of the DOS, which shows how the density of states is distributed across different atomic orbitals or specific atomic sites. While the DOS provides the total number of states at each energy level, the pDOS breaks this down further by projecting the states onto different components (such as atoms or atomic orbitals).</p>
+    <p>For the DOS and the PDOS, D(E) is calculated as follows:</p>
     <p align="center">
       <img src="https://latex.codecogs.com/png.latex?\dpi{150} $\rm D(E) = \sum_{\rm i} w_{\rm i} \cdot \frac{1}{\sqrt{2 \pi \sigma^2}} exp\left(- \frac{\left(E-E_i \right)^2}{2 \sigma^2} \right)   $" />
     </p>
