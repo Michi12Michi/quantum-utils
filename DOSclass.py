@@ -221,7 +221,8 @@ class DensityOfStates:
         if out_file and len(str(out_file)) == 0:
             raise ValueError("The filename for DOS/pDOS saving must be a non empty string or a path.")
         
-        squared_sums, energies = cls.pdos_energies(filename=filename)
+        orb_type = kwargs.get("orb_type", None)
+        squared_sums, energies = cls.pdos_energies(filename=filename, orb_type=orb_type)
         
         squared_sums = np.array(squared_sums)
         energies = np.array(energies)
@@ -267,7 +268,7 @@ class DensityOfStates:
         gaussian_kernel = np.exp(- (energy_diff ** 2) / (2.0 * self.sigma ** 2)) 
         density_vector = np.sum(self.weights * self.DOS_PRE_EXP_FACTOR * gaussian_kernel, axis=1)
 
-        density_vector /= self.norm_factor
+        # density_vector /= self.norm_factor
         if self.out_file:
             out_path = Path(self.out_file)
             out_path = out_path.with_suffix(".txt")
@@ -312,7 +313,7 @@ class DensityOfStates:
         return int((max_value - min_value + 2*padding)/stepsize)
 
     @staticmethod
-    def pdos_energies(filename: Union[str, Path]) -> Tuple[np.ndarray]:
+    def pdos_energies(filename: Union[str, Path], orb_type: str = None) -> Tuple[np.ndarray]:
         ''' 
             Reads a pdos CP2K file and calculates the square of sums foreach row (ie foreach MO). 
             Returns a tuple object of a list of squared sums of coefficients and a deque of energies.
@@ -330,19 +331,32 @@ class DensityOfStates:
         if isinstance(filename, Path) and not filename.exists():
             raise IOError(f"The specified file {filename} does not exist.")
 
-        squared_sums = deque()
-        energies = deque()
+        # squared_sums = deque()
+        # energies = deque()
+
         try:
             data = np.loadtxt(filename, comments="#")
             if data.size == 0:
                 raise ValueError(f"{filename} is empty or contains no valid data")
             energies = data[:, 1]*H_TO_EV
-            kohn_shams = data[:, 3:]
-            squared_sums = np.array((np.sum(kohn_shams, axis=1)**2))
+            # check type
+            if orb_type is not None:
+                match(orb_type):
+                    case "s":
+                        coeffs = data[:, 3]
+                    case "p":
+                        coeffs = data[:, 4]
+                    case "d":
+                        coeffs = data[:, 5]
+                    case "f":
+                        coeffs = data[:, 6]
+            else:
+                kohn_shams = data[:, 3:]
+                coeffs = np.array((np.sum(kohn_shams, axis=1)))
         except Exception as e:
             print(f"An error occurred reading the file {filename}. {e}")
             raise
-        return squared_sums, np.array(energies)
+        return coeffs, np.array(energies)
 
     @staticmethod
     def create_graph(
