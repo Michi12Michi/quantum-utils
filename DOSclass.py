@@ -119,7 +119,7 @@ class DensityOfStates:
             'homo_lumo': re.compile(r"HOMO - LUMO gap"),
             'force_eval_end': re.compile(r"FORCE_EVAL"),
             'convergence': re.compile(r"Reached convergence in"),
-            'numbers': re.compile(r"(-?\d+.\d+)")
+            'numbers': re.compile(r"(-?\d+\.\d+)")
         }
         
         try:
@@ -463,3 +463,4 @@ class DensityOfStates:
         plt.savefig(f"{output_filename}", dpi=600)
 
         plt.show()
+
