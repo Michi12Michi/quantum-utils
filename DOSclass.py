@@ -32,7 +32,7 @@ class DensityOfStates:
             raise ValueError("The parameter name must be a string (for example Energy, Distance, etc).")
         if not isinstance(parameter_vector, np.ndarray):
             raise ValueError("The parameter vector must be an array.")
-        if not (np.issubdtype(parameter_vector.dtype, np.float64)):
+        if not np.issubdtype(parameter_vector.dtype, np.floating):
             raise ValueError("The parameter vector must be an array of np.floating of float values.")
         if parameter_vector.size == 0:
             raise ValueError("The parameter vector cannot be empty.")
@@ -244,7 +244,7 @@ class DensityOfStates:
             out_file=out_file
         )
 
-    def create_density_vector(self,) -> tuple[np.array, np.array]:
+    def create_density_vector(self,) -> Tuple[np.array, np.array]:
         '''
             Calculates the normalized DOS (according to self.norm_factor) on the range between parameter_minimum and parameter_maximum. 
             Returns a tuple object of np.ndarray containing DOS and its range. If self.out_file is specified, it also produces formatted 
@@ -268,7 +268,7 @@ class DensityOfStates:
         gaussian_kernel = np.exp(- (energy_diff ** 2) / (2.0 * self.sigma ** 2)) 
         density_vector = np.sum(self.weights * self.DOS_PRE_EXP_FACTOR * gaussian_kernel, axis=1)
 
-        # density_vector /= self.norm_factor
+        density_vector /= self.norm_factor
         if self.out_file:
             out_path = Path(self.out_file)
             out_path = out_path.with_suffix(".txt")
@@ -406,7 +406,7 @@ class DensityOfStates:
         output_filename = output_filename.with_suffix(".svg")
         if not isinstance(parameter_vector_1, (list, deque, np.ndarray)):
             raise ValueError("The first parameter vector must be a list, or a deque or an array.")
-        if not (np.issubdtype(parameter_vector_1.dtype, (np.float64, float))):   
+        if not np.issubdtype(parameter_vector_1.dtype, np.floating):   
             raise ValueError("The first parameter vector must be a list, or a deque or an array of floating point values.")
         if not isinstance(density_vector_1, (list, deque, np.ndarray)):
             raise ValueError("The first density vector must be a list, or a deque or an array.")
@@ -458,6 +458,8 @@ class DensityOfStates:
         if parameter_vector_2 is None:
             plt.xlim(np.min(parameter_vector_1), np.max(parameter_vector_1))
         else:
-            plt.xlim(np.min(np.min(parameter_vector_1, parameter_vector_2)), np.max(np.max(parameter_vector_1, parameter_vector_2)))
+            plt.xlim(min(np.min(parameter_vector_1), np.min(parameter_vector_2)),
+         max(np.max(parameter_vector_1), np.max(parameter_vector_2)))
         plt.savefig(f"{output_filename}", dpi=600)
+
         plt.show()
